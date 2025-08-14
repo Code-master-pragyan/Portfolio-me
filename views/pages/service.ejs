@@ -1,0 +1,17 @@
+<% layout("/layouts/boilerplate") %>
+
+<section class="service-details-section">
+    <div class="service-details-card">
+        <div class="service-details-header">
+            <i class="fa-solid fa-cogs"></i>
+            <h1><%= service.title %></h1>
+        </div>
+        <p class="service-description"><%= service.description %></p>
+        <ul class="service-points">
+            <% for (point of service.points) { %>
+                <li><i class="fa-solid fa-check"></i> <%= point %></li>
+            <% } %>
+        </ul>
+        <a href="/" data-scroll="services" class="back-btn"><i class="fa-solid fa-arrow-left-long"></i> Back to Home</a>
+    </div>
+</section>

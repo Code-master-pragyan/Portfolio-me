@@ -1,0 +1,63 @@
+<% layout("/layouts/boilerplate") %>
+
+    <section class="project-details-section">
+        <div class="project-details-card">
+            <h1>
+                <%= project.title %>
+            </h1>
+            <p class="project-description">
+                <%= project.description %>
+            </p>
+            <% if (project.demoVideo) { %>
+                <video class="project-demo" src="<%= project.demoVideo %>" controls
+                    poster="<%= project.poster || '/images/project-poster.jpg' %>"></video>
+                <% } else { %>
+                    <img class="project-demo" src="<%= project.poster || '/images/project-poster.jpg' %>"
+                        alt="Project Preview">
+                    <% } %>
+                        <div class="project-tech">
+                            <h3>Tech Stack:</h3>
+                            <ul>
+                                <% project.techStack.forEach(function(tech) { %>
+                                    <li><i class="fa-solid fa-circle"></i>
+                                        <%= tech %>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                        </div>
+                        <div class="project-problems">
+                            <h3>Problems Faced:</h3>
+                            <ul>
+                                <% project.problems.forEach(function(problem) { %>
+                                    <li><i class="fa-solid fa-circle"></i>
+                                        <%= problem %>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                        </div>
+                        <div class="project-solutions">
+                            <h3>How I Solved Them:</h3>
+                            <ul>
+                                <% project.solutions.forEach(function(solution) { %>
+                                    <li><i class="fa-solid fa-circle"></i>
+                                        <%= solution %>
+                                    </li>
+                                    <% }) %>
+                            </ul>
+                        </div>
+                        <div class="project-details-actions">
+                            <% if (project.liveLink) { %>
+                                <a href="<%= project.liveLink %>" class="project-live-link" target="_blank">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Visit Website
+                                </a>
+                                <% } else if (project.githubLink) { %>
+                                    <a href="<%= project.githubLink %>" class="project-live-link" target="_blank">
+                                        <i class="fa-brands fa-github"></i> View on GitHub
+                                    </a>
+                                    <% } %>
+                                        <a href="/#portfolio" class="back-btn">
+                                            <i class="fa-solid fa-arrow-left-long"></i> Back to Portfolio
+                                        </a>
+                        </div>
+        </div>
+    </section>
