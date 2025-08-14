@@ -60,7 +60,7 @@ const projects = {
     urbanescape: {
         title: "UrbanEscape",
         description: "UrbanEscape is a modern property and travel platform for Northeast India, allowing users to explore and list hotels, resorts, and apartments. Powered by AI, it offers smart search and filtering to enhance the travel planning experience.",
-        demoVideo: "/videos/urbanescape-demo.mp4",
+        demoVideo: "https://www.youtube.com/watch?v=ykiQ80J5TnU",
         poster: "/images/urbanthumb.png",
         techStack: ["EJS", "Node.js", "Express", "MongoDB", "Mapbox", "Bootstrap", "Passport.js"],
         problems: [
@@ -77,7 +77,7 @@ const projects = {
     vitalsync: {
         title: "VitalSync",
         description: "VitalSync is a smart healthcare website that helps users analyze symptoms and receive instant health suggestions using AI. Built with the MERN stack and integrated with the Openrouter API, it provides a responsive and user-friendly experience. The main goal is to Analyze user-reported symptoms to suggest possible health conditions using AI; browse detailed information about diseases, symptoms, and causes in one place; scan and identify medicines to get usage info, dosage, and side effects instantly.",
-        demoVideo: "/videos/Demo VS 1.mp4",
+        demoVideo: "https://www.youtube.com/watch?v=EEmNplJKwCc",
         poster: "/images/vitalthumb.png",
         techStack: ["React.js + Typescript", "Node.js", "Express", "MongoDB", "Openrouter API", "Tailwind", "overpass API", "Passport.js"],
         problems: [

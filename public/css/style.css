@@ -878,6 +878,34 @@ nav ul li a:hover::after {
   text-align: center;
 }
 
+.video-wrap {
+  width: 100%;
+  margin: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.video-inner {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 16/9;
+  background: #181818;
+  border-radius: 1rem;
+  box-shadow: 0 2px 16px #ff004f22;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-inner iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  background: #181818;
+}
+
 
 /* -----------------contact------------------- */
 
@@ -1315,7 +1343,7 @@ nav .fa-bars {
     font-size: 0.95rem;
     width: 80%;
     text-align: center;
-    margin: 0; 
+    margin: 0;
   }
 
   /* Navbar */
@@ -1389,10 +1417,12 @@ nav .fa-bars {
   nav.sidebar-open .fa-xmark {
     display: block;
   }
+
   nav.sidebar-open .fa-bars {
     display: none;
   }
-  nav.sidebar-open ~ .github-float {
+
+  nav.sidebar-open~.github-float {
     display: none !important;
   }
 }
