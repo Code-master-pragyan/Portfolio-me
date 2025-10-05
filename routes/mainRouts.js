@@ -151,6 +151,7 @@ router.get("/projects/:project", (req, res) => {
 
 
 router.post('/contact', async (req, res) => {
+    console.log("Contact route hit", req.body);
     const { name, email, message } = req.body;
 
     // Configure your email transporter (use your real email and app password)
