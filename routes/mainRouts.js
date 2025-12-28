@@ -118,7 +118,7 @@ const projects = {
             "Used Java's Math library to implement precise sin, cos, and tan calculations.",
             "Organized components using Java Swing's GridLayout for a clean and user-friendly interface."
         ],
-         githubLink: "https://github.com/Code-master-pragyan/Java-Advanced-Calculator"
+        githubLink: "https://github.com/Code-master-pragyan/Java-Advanced-Calculator"
     },
 
 };
@@ -156,16 +156,20 @@ router.post('/contact', async (req, res) => {
 
     // Configure your email transporter (use your real email and app password)
     const transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: "smtp-relay.brevo.com",
+        port: 587,
+        secure: false,
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
+            user: process.env.BREVO_USER,
+            pass: process.env.BREVO_PASS
         }
     });
 
+
     const mailOptions = {
-        from: `"Portfolio Contact" <pragyanlahkar28@gmail.com>`,
+        from: `"Portfolio" <pragyanlahkar65@gmail.com>`,
         to: 'pragyanlahkar28@gmail.com', // where you want to receive the messages
+        replyTo: email,
         subject: `Portfolio Contact from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     };
